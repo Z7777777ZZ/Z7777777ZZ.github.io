@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | 97的空间(知世界版)</title>
+  <title>搭建个人博客 | 97的空间(知世界版)</title>
 
   
 
@@ -51,7 +51,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://free4kwallpapers.com/uploads/originals/2021/11/05/coding-love-wallpaper.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://free4kwallpapers.com/uploads/wallpaper-cache/girl-watching-the-sunset-wallpaper-400x270-MM-100.jpg)"></div>
   
 
   <!-- navbar -->
@@ -104,11 +104,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">搭建个人博客</h1>
           <h2 class="title-sub-wrap">
             <strong>97</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-02-19T09:44:17.882Z" itemprop="datePublished">2024-02-19</time>
+            <time  class="article-date" datetime="2024-02-19T14:21:11.119Z" itemprop="datePublished">2024-02-19</time>
           </h2>
           
           
@@ -139,19 +139,76 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h1><p><em>本文将简单粗暴的但又细致入微的描述建立个人博客的详细过程，博主踩了好多坑之后才搭建完毕，废话不多说直接开始吧~</em></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>我们采用github+hexo来搭建个人博客，因为github其实给你的每个仓库或者说每个项目都设置了配置静态页面的选项，所以我们利用这一点可以来搭建个人博客，不用额外购买域名和搞服务器那些，我们需要配置如下：</p>
+<ul>
+<li>Git（这个大家应该都有，没有的话请去网上找教程）</li>
+<li>node.js (直接去官网下载，然后配置环境之类的，也去网上找教程；<strong>因为node.js是基于V8引擎构建的，JS运行时候，可以用它搭建本地服务器，我们在此教程中需要用到他的npm命令</strong>)</li>
+<li>Hexo的安装与配置(请先配置好node.js)<ul>
+<li>简介：一个基于node.js的帮我们写好的博客框架，用了它，我们只需要修改部分内容，就能获得自己的个人博客，并编写文章上传。<ul>
+<li><p>创建工作文件夹Myblog,以后都在这个目录下操作（最好全英文）</p>
+</li>
+<li><p>在windows powershell中运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>安装hexo，我在运行该命令时遇到提示”no fund“，这个是—一般都是开发者捐赠支持的提示，打开一个github的链接之后，会显示需要打赏捐赠的信息，此时如果不想捐赠或者跳过这个提示的话，直接在后面加–no-fund即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli --no-fund</span><br></pre></td></tr></table></figure></li>
+<li><p>运行命令检查是否安装成功，出现对应的版本号即安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li>
+<li><p>运行如下命令，初始化一个使用hexo框架的项目，<strong>注意此时的目录必须为空目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></li>
+<li><p>命令行里输入如下命令，即可启动本地服务器，会出现一个本地的链接，在浏览器里打开，不出意外的话你会看到你的Hexo博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+<li><p>如果你需要停止运行，只需要按照提示进行ctrl+C即可</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="认识项目文件结构"><a href="#认识项目文件结构" class="headerlink" title="认识项目文件结构"></a>认识项目文件结构</h3><p>到这里你的第一个个人博客已经完成了一半了，那么让我们来看看我们的项目到底是什么样子的吧，我们用Vscode打开工作目录，当然你也可以在文件资源管理器里观察,不出意外的话应该如下所示</p>
+<ul>
+<li><p>deploy_git(如果你没有该文件的话，请运行以下命令)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li><p>.github</p>
+</li>
+<li><p>node_modules(这里面是配置的各种包，不用管)</p>
+</li>
+<li><p>public(这是你运行项目之后会有的)</p>
+</li>
+<li><p>scaffolds(暂时不用管)</p>
+</li>
+<li><p>source(这里面放我们的源文件,比如我这里放了三个md文件)</p>
+<ul>
+<li>test1.md</li>
+<li>test2.md</li>
+<li>helloworld.md</li>
+</ul>
+</li>
+<li><p>themes(这里是博客目录文件夹)</p>
+</li>
+<li><p>_config.yml(这里面是各种配置)</p>
+</li>
+</ul>
+<h3 id="选择个人博客主题"><a href="#选择个人博客主题" class="headerlink" title="选择个人博客主题"></a>选择个人博客主题</h3><p>这个时候你可以选择自己喜欢的博客风格啦，这时候登录hexo.io官网，选择主题，然后挑选你喜欢的主题，点进去之后一般都是进入作者的github仓库，然后作者会详细介绍如何配置，我们以flexblock主题为例~</p>
+<p>作者要求我们运行命令克隆他的仓库，这个时候如果你会魔法的话，尽量选择网速快的node,我就是选择了网速非常慢的导致一致下载错误，后来换了网速快的node就直接克隆过来了，不出意外的话你的theme文件夹会出现对应的主题文件夹，我这里是flexblock~</p>
+<p>然后我们跟着主题作者的要求，在我们的_config.yml配置文件中，找到theme的key，将其value改为对应的主题名称，这个时候刷新一下你的本地项目，是不是已经换了风格了呢~</p>
+<p>主题作者都会详细介绍了如何配置自定义修改其主题，这里就交给大家自己摸索了，我反正摸索了好久才懂我的主题！一般都是在<strong>根目录_config.yml配置文件和和themes目录下你的主题目录下的_config.yml配置文件中修改哦~</strong></p>
+<h3 id="添加博客文章"><a href="#添加博客文章" class="headerlink" title="添加博客文章"></a>添加博客文章</h3><p>如果你已经完成上述步骤，那么恭喜你，可以写自己的博客咯，在你的source文件夹下新建md文件，用markdown语法编写你的博客，这里大家就自己发挥了！</p>
+<p>记得front-matter的配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: xxx</span><br><span class="line">author: xxx</span><br><span class="line">cover: xxx</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="关联GitHub"><a href="#关联GitHub" class="headerlink" title="关联GitHub"></a>关联GitHub</h3><p>登陆你的github，新建仓库，注意仓库名格式为  **<em>用户名.github.io</em>  ** 仓库类型为public（注意这里不勾选生成README文件，不然后面会有两个分支，博主就在这里晕了一天）</p>
+<p>如果你之前使用过git上传项目，那就太好了，如果没有，请自行学习配置密匙等等操作</p>
+<p>复制仓库的ssh地址，然后在工作目录的_config.yml配置文件的最下方的deploy这个key中配置如下值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#x27;git&#x27;</span><br><span class="line">  repository: xxx</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>这个时候就大致完成了！</p>
+<h3 id="浏览博客-上传文章"><a href="#浏览博客-上传文章" class="headerlink" title="浏览博客&amp;上传文章"></a>浏览博客&amp;上传文章</h3><p>每当你有新的md文件需要上传，就运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>这个时候就可以在你的github仓库的action中看到工作流，然后在仓库的setting-pages中点击访问网站，就可以看到你的博客了！</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>到这里就大致完成了个人博客的搭建，我暂时分享到这里，剩下的广阔天地就留给大家去探索啦！</p>
 
       </section>
 
@@ -159,22 +216,22 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://free4kwallpapers.com/uploads/wallpaper-cache/blue-motherboard-wallpaper-400x270-MM-100.jpg"></div>
+      <div class="card-cover" background-image-lazy data-img="https://free4kwallpapers.com/uploads/wallpaper-cache/girl-watching-the-sunset-wallpaper-400x270-MM-100.jpg"></div>
     
     <div class="card-text">
       
-        <a href="/2024/02/19/test/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Ts学习</h2>
+        <a href="/2024/02/19/trip/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">看看世界咯</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
