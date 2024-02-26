@@ -51,7 +51,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://free4kwallpapers.com/uploads/wallpaper-cache/girl-watching-the-sunset-wallpaper-400x270-MM-100.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://wx4.sinaimg.cn/mw690/008tB1u9gy1hn3vb14161j33402c04qq.jpg)"></div>
   
 
   <!-- navbar -->
@@ -113,7 +113,7 @@
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-02-20T06:09:17.956Z" itemprop="dateUpdated">2024-02-20</time>
+              <time  class="article-updated" datetime="2024-02-23T16:33:02.778Z" itemprop="dateUpdated">2024-02-24</time>
             </h2>
           
           
@@ -356,34 +356,6 @@
 
   
   <!-- aplayer -->
-
-
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: false,
-          loop: false,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
 
 
 <!-- dplayer -->
