@@ -22,7 +22,7 @@
 
   
 
-  <title>ADS | 97的空间(知世界版)</title>
+  <title>一些感悟与成长 | 97的空间(知世界版)</title>
 
   
 
@@ -51,7 +51,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://free4kwallpapers.com/uploads/originals/2021/11/05/coding-love-wallpaper.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://github.com/Z7777777ZZ/blogpic/blob/master/2320eadb3d3a1cd195eb5100343b798.jpg?raw=true)"></div>
   
 
   <!-- navbar -->
@@ -104,22 +104,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">ADS</h1>
+          <h1 class="title-wrap">一些感悟与成长</h1>
           <h2 class="title-sub-wrap">
             <strong>97</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-02-20T03:49:55.506Z" itemprop="datePublished">2024-02-20</time>
+            <time  class="article-date" datetime="2024-02-22T04:26:18.018Z" itemprop="datePublished">2024-02-22</time>
           </h2>
           
             <h2 class="last-time">
               <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-02-26T09:49:42.996Z" itemprop="dateUpdated">2024-02-26</time>
+              <time  class="article-updated" datetime="2024-02-26T07:12:22.558Z" itemprop="dateUpdated">2024-02-26</time>
             </h2>
           
           
           <ul class="wrap-list dark">
-  
-    <li><a href="/categories/CS%E4%B8%93%E4%B8%9A%E8%AF%BE/">📒 CS专业课</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -146,44 +144,16 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="2024-2-26第一节课"><a href="#2024-2-26第一节课" class="headerlink" title="2024_2_26第一节课"></a>2024_2_26第一节课</h1><p>本节课大致讲了AVL树和Splay树还有摊还分析，课上听的迷迷糊糊，现在来复盘一下~</p>
-<h2 id="AVL树-请首先了解二叉搜索树"><a href="#AVL树-请首先了解二叉搜索树" class="headerlink" title="AVL树(请首先了解二叉搜索树)"></a>AVL树(请首先了解二叉搜索树)</h2><h3 id="AVL树的概念"><a href="#AVL树的概念" class="headerlink" title="AVL树的概念"></a>AVL树的概念</h3><p>AVL树：平衡二叉搜索树。从名字上看它是一棵二叉查找树，所以它具有查找树的特点。但是它还具有以下特点：</p>
-<ul>
-<li>它是一颗孔数或它的左右两个子树的高度差的绝对值不超过1</li>
-<li>左右两个子树也都是一颗平衡二叉树</li>
-</ul>
-<p><strong>AVL树的作用，也是为什么要构造AVL树的原因：我们知道对二叉搜索树的操作一般都是以树高来决定的，可极端情况下一颗二叉搜索树可能是一个链状的，效率很低，所以我们想着能不能通过缩短树高来提高效率，这就引入了AVL树，因为AVL树把树高缩短至了logN</strong></p>
-<h3 id="平衡因子（Balance-Factor，简写为bf）"><a href="#平衡因子（Balance-Factor，简写为bf）" class="headerlink" title="平衡因子（Balance Factor，简写为bf）"></a>平衡因子（Balance Factor，简写为bf）</h3><p>bf：结点的左子树的深度减去右子树的深度（有的教材可能不一样，加个绝对值就好</p>
-<p>通过计算每个结点的bf就可以知道这个树是不是AVL树，**-1&lt;&#x3D;bf&lt;&#x3D;1**</p>
-<h3 id="AVL树的操作"><a href="#AVL树的操作" class="headerlink" title="AVL树的操作"></a>AVL树的操作</h3><p>AVL的基本操作和二叉查找树一样，这里我们关注的是两个变化很大的操作：插入&amp;删除，因为这两个操作为导致失衡</p>
-<p>插入：分为LL,RR,LR,RL型</p>
-<p>我在这里对旋转一直有个误区，比如LL型，我一直认为三个都得旋转，可以这样理解，其实左旋就是中间的结点为轴，然后左边的结点逆时针转过来，右旋就是中间的结点为轴，右边的结点顺时针转过来</p>
-<p> eg：LL型代表在左节点的左子树上插入了结点</p>
-<ul>
-<li>LL型：对应右旋。可以这样理解，因为在左子树的左边插入了一个结点导致失衡了。</li>
-<li>RR型：对应左旋。可以这样理解，出现问题的结点的右子树作为新树的根结点，然后出现问题的结点作为新树的根节点的左子树，如果新的树根原来有左子树，那么原来的左子树就作为旧根节点的右子树。</li>
-<li>LR型：对应左右旋，插入的结点在左节点的右子树上。先对出现问题的左子树左旋实际上转化为了LL型，然后再右旋</li>
-<li>RL型：对应右左旋，插入的结点在右节点的左子树上</li>
-</ul>
-<p>这里放一个链接，有图很形象</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xiaojin21cen/article/details/97602146?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170893164816800197060087%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=170893164816800197060087&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-97602146-null-null.142%5Ev99%5Epc_search_result_base9&utm_term=avl%E6%A0%91&spm=1018.2226.3001.4187">数据结构 —— 图解AVL树(平衡二叉树)-CSDN博客</a></p>
+        <h1 id="一些感悟"><a href="#一些感悟" class="headerlink" title="一些感悟"></a>一些感悟</h1><p>这里就存放我的平时遇到一些事情的感悟，用来鞭策与鼓励自己咯~</p>
+<h3 id="2024-2-22"><a href="#2024-2-22" class="headerlink" title="2024_2_22"></a>2024_2_22</h3><p>一场突如其来的大雪打乱了我的所有计划。</p>
+<p>原本是预定的2月22日中午郑州东站的高铁票，下午就能到杭州西，但是不巧的是2月20日河南就开始下大雪，从最开始的冰雹，到后面的鹅毛大雪，真就像”撒盐空中差可拟“啦。</p>
+<p>2月21日中午我被妈妈从睡梦中叫起，说外面下了很大的雪，路面都结冰了，2月22日也没有前往郑州的拼车了，我很有可能没办法返校了。妈妈当时很着急，但是我当时刚睡醒脑袋迷迷糊糊的，有一点点起床气，我可能声音大了点，冲妈妈吼了几句，一副无所谓的态度，惹妈妈生气了，现在想想，我是真该死呀！</p>
+<p>我和妈妈积极地想想办法，最终决定下午做最后的拼车走，但是不去郑州，去焦作，在焦作站的附近找个酒店住一晚上，第二天早上赶焦作到郑州的高铁去郑州，然后再从郑州前往杭州，中间还顺带捎上了xpd，这里暂且不提。</p>
+<p>可是计划永远赶不上变化，晚上十点钟，在我入住酒店4个小时后，12306通知我，我那一班高铁停运了，也是仅有的停运的几班，但是其他的都没听，emmmmm太crazy了，好事多磨！</p>
+<p>然后我就紧急候补了很多很多，但是很可惜的是到最后都没能成功，不过我还是有应急方案，我买了早上8点到晚上十一点的无座绿皮火车，虽然朋友圈很多朋友都难以置信，但是没办法，骑虎难下，唯有挑战。</p>
+<p>买了一个小板凳，从刚上车挤地铁的状况动弹不得，到后来勉强能放下我的小板凳可以坐下，但是依旧被过道上不断走过的人群迫使我站起来艰难的让座，被上卫生间的人叫起来，因为我的位置很尴尬，挡着了卫生间的门和过道，到后来，我终于在吸烟区找到了宽敞的位置，可以舒展开了，但是被急刹车唤醒了，随之而来的是经久不衰的烟味，差劲的地板，恶劣的环境…….这才过去3个小时，我还有11个小时要抗。</p>
+<p>其实昨晚我是有机会买到高铁的，但是是一等座和商务座，要贵上不少，嗯，怎么说呢，看着窗外的景色，我不禁想，这算不算对我的考验呢，我可不可以凭借自己的努力以后再也不要这样的环境乘坐绿皮火车了，我可不可以靠自己坐上一等座，坐上商务座，让自己过得舒服一点，我想我会的，加油吧，新学期，这就是我的动力，<strong>我想我永远也不会忘记坐在吸烟区角落，带着两个口罩，紧紧抱住书包的我</strong>！</p>
 
-    <figure class="figure-image">
-      <img src="https://img-blog.csdnimg.cn/20190823133444314.png" alt="AVL树的旋转" loading="lazy" />
-      <figcaption>AVL树的旋转</figcaption>
-    </figure>
-  
-
-<p>做题的时候如果觉得旋转来旋转去太麻烦，请参考如下视频的暴力做法</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vP411g7J3/?spm_id_from=pageDriver&vd_source=baca848cd75282bc0a75a6a74a00e149">全网最清晰快速排序，看完快排思想和代码全部通透，不通透你打我！_哔哩哔哩_bilibili</a></p>
-<p>相关代码实现可以参考这个视频</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1S94y1V7wL/?spm_id_from=333.337.search-card.all.click&vd_source=baca848cd75282bc0a75a6a74a00e149">【平衡二叉树（AVL树）】这个视频解决你关于平衡二叉树的所有问题_哔哩哔哩_bilibili</a></p>
-<h2 id="Splay树"><a href="#Splay树" class="headerlink" title="Splay树"></a>Splay树</h2><h3 id="Splay树的概念"><a href="#Splay树的概念" class="headerlink" title="Splay树的概念"></a>Splay树的概念</h3><p>Splay是二叉查找树的一种改进数据结构，它的主要特点是不会保证树一直是平衡的，但各种操作的平摊时间复杂度是O(logN)</p>
-<p>Splay的出发点：考虑到局部性原理（刚被访问的内容下次可能仍会被访问，查找次数多的内容可能下一次会被访问），为了使整个查找时间更小，<strong>被查频率高的那些节点应当经常处于靠近树根的位置</strong>。这样，很容易得想到以下这个方案：<strong>每次查找节点之后对树进行重构</strong>，把被查找的节点搬移到树根，这种自调整形式的二叉查找树就是伸展树。每次对伸展树进行操作后，它均会通过旋转的方法把被访问节点旋转到树根的位置。</p>
-<p>旋转前后，中序遍历树不变</p>
-<p>放几个视频链接，用作理解Splay</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1zf4y1G7Ab/?spm_id_from=333.337.search-card.all.click&vd_source=baca848cd75282bc0a75a6a74a00e149">2分钟理解Splay操作_哔哩哔哩_bilibili</a></p>
-<h1 id="第二次课"><a href="#第二次课" class="headerlink" title="第二次课"></a>第二次课</h1><h1 id="第三次课"><a href="#第三次课" class="headerlink" title="第三次课"></a>第三次课</h1>
       </section>
 
       
@@ -193,10 +163,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
+      <div class="card-cover" background-image-lazy data-img="https://github.com/Z7777777ZZ/blogpic/blob/master/bbc70cb0f9234eb79d0073fbce3a9f3.jpg?raw=true"></div>
+    
     <div class="card-text">
       
-        <a href="/2024/02/20/cryptography/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">密码学</h2>
+        <a href="/2024/02/26/diary/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">日志</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -210,8 +182,8 @@
     
     <div class="card-text">
       
-        <a href="/2024/02/20/database/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">数据库基础</h2>
+        <a href="/2024/02/20/cryptography/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">密码学</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -272,18 +244,6 @@
 </section>
 
       
-<section class="widget-toc widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-toc" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M134.50666666 767.46666668H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.23999999v50.13333333c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H134.50666666c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.13333333c0.10666668-27.73333333 22.50666668-50.24000001 50.24000001-50.24000001zM84.37333332 541.65333333h326.18666669c27.73333333 0 50.24000001 22.39999999 50.23999999 50.13333334v50.24000001c0 27.73333333-22.50666668 50.24000001-50.24000002 50.23999999H84.37333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.23999999v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333334zM134.50666666 315.83999999H460.8c27.73333333 0 50.24000001 22.50666668 50.24000001 50.24000001v50.24000001c0 27.73333333-22.50666668 50.13333334-50.24000001 50.13333333H134.50666666c-27.73333333 0-50.24000001-22.39999999-50.23999999-50.13333333v-50.24000001c0.10666668-27.84000001 22.50666668-50.24000001 50.24000001-50.23999999zM209.81333332 89.91999999h326.18666671c27.73333333 0 50.24000001 22.39999999 50.23999997 50.13333335v50.23999999c0 27.73333333-22.50666668 50.24000001-50.24000001 50.24000001H209.81333332c-27.73333333 0-50.24000001-22.50666668-50.23999999-50.24000001v-50.24000001c0-27.73333333 22.50666668-50.13333334 50.24000001-50.13333333zM692.05333333 623.36l274.66666669 176.00000002c23.36000001 14.93333333 30.08 45.97333334 15.14666666 69.33333332L954.77333334 910.93333333c-14.93333333 23.25333334-45.97333334 30.08-69.33333335 15.14666667l-274.66666666-176c-23.36000001-14.93333333-30.08-45.97333334-15.14666667-69.33333333l27.09333334-42.24000001c14.93333333-23.36000001 46.08000001-30.08 69.33333333-15.14666666z" fill="currentColor"></path>
-</svg>
-    <span>TOC</span>
-  </div>
-  <div class="widget-body">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2024-2-26%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE"><span class="toc-number">1.</span> <span class="toc-text">2024_2_26第一节课</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AVL%E6%A0%91-%E8%AF%B7%E9%A6%96%E5%85%88%E4%BA%86%E8%A7%A3%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">1.1.</span> <span class="toc-text">AVL树(请首先了解二叉搜索树)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Splay%E6%A0%91"><span class="toc-number">1.2.</span> <span class="toc-text">Splay树</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AF%BE"><span class="toc-number">2.</span> <span class="toc-text">第二次课</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE"><span class="toc-number">3.</span> <span class="toc-text">第三次课</span></a></li></ol>
-  </div>
-</section>
-
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">

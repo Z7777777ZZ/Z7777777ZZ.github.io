@@ -22,7 +22,7 @@
 
   
 
-  <title>ADS | 97的空间(知世界版)</title>
+  <title>日志 | 97的空间(知世界版)</title>
 
   
 
@@ -51,7 +51,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://free4kwallpapers.com/uploads/originals/2021/11/05/coding-love-wallpaper.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://github.com/Z7777777ZZ/blogpic/blob/master/bbc70cb0f9234eb79d0073fbce3a9f3.jpg?raw=true)"></div>
   
 
   <!-- navbar -->
@@ -104,22 +104,15 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">ADS</h1>
+          <h1 class="title-wrap">日志</h1>
           <h2 class="title-sub-wrap">
             <strong>97</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2024-02-20T03:49:55.506Z" itemprop="datePublished">2024-02-20</time>
+            <time  class="article-date" datetime="2024-02-26T15:10:58.244Z" itemprop="datePublished">2024-02-26</time>
           </h2>
-          
-            <h2 class="last-time">
-              <span>最后更新于</span>
-              <time  class="article-updated" datetime="2024-02-26T09:49:42.996Z" itemprop="dateUpdated">2024-02-26</time>
-            </h2>
           
           
           <ul class="wrap-list dark">
-  
-    <li><a href="/categories/CS%E4%B8%93%E4%B8%9A%E8%AF%BE/">📒 CS专业课</a></li>
   
 </ul>
           <ul class="wrap-list dark">
@@ -146,72 +139,47 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="2024-2-26第一节课"><a href="#2024-2-26第一节课" class="headerlink" title="2024_2_26第一节课"></a>2024_2_26第一节课</h1><p>本节课大致讲了AVL树和Splay树还有摊还分析，课上听的迷迷糊糊，现在来复盘一下~</p>
-<h2 id="AVL树-请首先了解二叉搜索树"><a href="#AVL树-请首先了解二叉搜索树" class="headerlink" title="AVL树(请首先了解二叉搜索树)"></a>AVL树(请首先了解二叉搜索树)</h2><h3 id="AVL树的概念"><a href="#AVL树的概念" class="headerlink" title="AVL树的概念"></a>AVL树的概念</h3><p>AVL树：平衡二叉搜索树。从名字上看它是一棵二叉查找树，所以它具有查找树的特点。但是它还具有以下特点：</p>
+        <h1 id="2024-2-26"><a href="#2024-2-26" class="headerlink" title="2024_2_26"></a>2024_2_26</h1><p>今天是开学第一天~</p>
+<p>今天值得肯定的是：</p>
 <ul>
-<li>它是一颗孔数或它的左右两个子树的高度差的绝对值不超过1</li>
-<li>左右两个子树也都是一颗平衡二叉树</li>
+<li>ADS讲了三部分内容：AVL树 &amp; Splay树 &amp; 均摊复杂度</li>
+<li>这个只弄懂了百分之50，还需要努力</li>
+<li>OOP第一节课讲了面向对象，感觉还可以</li>
+<li>密码学第一节听着也能听懂</li>
+<li>今天的Vlog素材也拍了差不多了</li>
+<li>今天也打卡了</li>
 </ul>
-<p><strong>AVL树的作用，也是为什么要构造AVL树的原因：我们知道对二叉搜索树的操作一般都是以树高来决定的，可极端情况下一颗二叉搜索树可能是一个链状的，效率很低，所以我们想着能不能通过缩短树高来提高效率，这就引入了AVL树，因为AVL树把树高缩短至了logN</strong></p>
-<h3 id="平衡因子（Balance-Factor，简写为bf）"><a href="#平衡因子（Balance-Factor，简写为bf）" class="headerlink" title="平衡因子（Balance Factor，简写为bf）"></a>平衡因子（Balance Factor，简写为bf）</h3><p>bf：结点的左子树的深度减去右子树的深度（有的教材可能不一样，加个绝对值就好</p>
-<p>通过计算每个结点的bf就可以知道这个树是不是AVL树，**-1&lt;&#x3D;bf&lt;&#x3D;1**</p>
-<h3 id="AVL树的操作"><a href="#AVL树的操作" class="headerlink" title="AVL树的操作"></a>AVL树的操作</h3><p>AVL的基本操作和二叉查找树一样，这里我们关注的是两个变化很大的操作：插入&amp;删除，因为这两个操作为导致失衡</p>
-<p>插入：分为LL,RR,LR,RL型</p>
-<p>我在这里对旋转一直有个误区，比如LL型，我一直认为三个都得旋转，可以这样理解，其实左旋就是中间的结点为轴，然后左边的结点逆时针转过来，右旋就是中间的结点为轴，右边的结点顺时针转过来</p>
-<p> eg：LL型代表在左节点的左子树上插入了结点</p>
+<p>今天的不足是：</p>
 <ul>
-<li>LL型：对应右旋。可以这样理解，因为在左子树的左边插入了一个结点导致失衡了。</li>
-<li>RR型：对应左旋。可以这样理解，出现问题的结点的右子树作为新树的根结点，然后出现问题的结点作为新树的根节点的左子树，如果新的树根原来有左子树，那么原来的左子树就作为旧根节点的右子树。</li>
-<li>LR型：对应左右旋，插入的结点在左节点的右子树上。先对出现问题的左子树左旋实际上转化为了LL型，然后再右旋</li>
-<li>RL型：对应右左旋，插入的结点在右节点的左子树上</li>
+<li>时间利用的还不够充分</li>
+<li>没有第一时间回顾课程</li>
 </ul>
-<p>这里放一个链接，有图很形象</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/xiaojin21cen/article/details/97602146?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522170893164816800197060087%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=170893164816800197060087&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-97602146-null-null.142%5Ev99%5Epc_search_result_base9&utm_term=avl%E6%A0%91&spm=1018.2226.3001.4187">数据结构 —— 图解AVL树(平衡二叉树)-CSDN博客</a></p>
+<p>明天要做到：</p>
+<ul>
+<li>ADS的课程笔记完善</li>
+<li>计组的课程笔记完善</li>
+<li>Xlab的任务完成</li>
+<li>创赛的总结完成</li>
+<li>如果还有时间Vlog剪辑</li>
+<li>健身</li>
+</ul>
 
-    <figure class="figure-image">
-      <img src="https://img-blog.csdnimg.cn/20190823133444314.png" alt="AVL树的旋转" loading="lazy" />
-      <figcaption>AVL树的旋转</figcaption>
-    </figure>
-  
-
-<p>做题的时候如果觉得旋转来旋转去太麻烦，请参考如下视频的暴力做法</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vP411g7J3/?spm_id_from=pageDriver&vd_source=baca848cd75282bc0a75a6a74a00e149">全网最清晰快速排序，看完快排思想和代码全部通透，不通透你打我！_哔哩哔哩_bilibili</a></p>
-<p>相关代码实现可以参考这个视频</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1S94y1V7wL/?spm_id_from=333.337.search-card.all.click&vd_source=baca848cd75282bc0a75a6a74a00e149">【平衡二叉树（AVL树）】这个视频解决你关于平衡二叉树的所有问题_哔哩哔哩_bilibili</a></p>
-<h2 id="Splay树"><a href="#Splay树" class="headerlink" title="Splay树"></a>Splay树</h2><h3 id="Splay树的概念"><a href="#Splay树的概念" class="headerlink" title="Splay树的概念"></a>Splay树的概念</h3><p>Splay是二叉查找树的一种改进数据结构，它的主要特点是不会保证树一直是平衡的，但各种操作的平摊时间复杂度是O(logN)</p>
-<p>Splay的出发点：考虑到局部性原理（刚被访问的内容下次可能仍会被访问，查找次数多的内容可能下一次会被访问），为了使整个查找时间更小，<strong>被查频率高的那些节点应当经常处于靠近树根的位置</strong>。这样，很容易得想到以下这个方案：<strong>每次查找节点之后对树进行重构</strong>，把被查找的节点搬移到树根，这种自调整形式的二叉查找树就是伸展树。每次对伸展树进行操作后，它均会通过旋转的方法把被访问节点旋转到树根的位置。</p>
-<p>旋转前后，中序遍历树不变</p>
-<p>放几个视频链接，用作理解Splay</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1zf4y1G7Ab/?spm_id_from=333.337.search-card.all.click&vd_source=baca848cd75282bc0a75a6a74a00e149">2分钟理解Splay操作_哔哩哔哩_bilibili</a></p>
-<h1 id="第二次课"><a href="#第二次课" class="headerlink" title="第二次课"></a>第二次课</h1><h1 id="第三次课"><a href="#第三次课" class="headerlink" title="第三次课"></a>第三次课</h1>
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2024/02/20/cryptography/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">密码学</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
+      <div class="card-cover" background-image-lazy data-img="https://github.com/Z7777777ZZ/blogpic/blob/master/2320eadb3d3a1cd195eb5100343b798.jpg?raw=true"></div>
+    
     <div class="card-text">
       
-        <a href="/2024/02/20/database/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">数据库基础</h2>
+        <a href="/2024/02/22/ganwu/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">一些感悟与成长</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -280,7 +248,7 @@
     <span>TOC</span>
   </div>
   <div class="widget-body">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2024-2-26%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE"><span class="toc-number">1.</span> <span class="toc-text">2024_2_26第一节课</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AVL%E6%A0%91-%E8%AF%B7%E9%A6%96%E5%85%88%E4%BA%86%E8%A7%A3%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">1.1.</span> <span class="toc-text">AVL树(请首先了解二叉搜索树)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Splay%E6%A0%91"><span class="toc-number">1.2.</span> <span class="toc-text">Splay树</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%AF%BE"><span class="toc-number">2.</span> <span class="toc-text">第二次课</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%AF%BE"><span class="toc-number">3.</span> <span class="toc-text">第三次课</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2024-2-26"><span class="toc-number">1.</span> <span class="toc-text">2024_2_26</span></a></li></ol>
   </div>
 </section>
 
